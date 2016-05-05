@@ -1,0 +1,26 @@
+# degenerate map to map all motifs to valid AA single-letter codes
+# testing to see if non-alpha numeric chars are our problem
+# crashed with just on "5" (if we don't remap 5=>E)
+#src	dest	aa_seq
+a	A	PEKPAE
+b	A	PKPAPA/PKPAPK
+c	C	EKPAPAP/EKTPAPA/EKPAPATP
+d	D	PKPEQP/PAPEQP
+# include typo fix
+5	E	QPAPAP
+e	E	QPAPAP
+f	F	NPB
+g	G	PDGDEEET/PDGDEEEL
+h	H	EPTQPEKPA/VTPKT
+i	I	ETPAPEAPAEQ/PAPEAPAEQPK/ETPAPEAP/PTPEAPA
+# continue on ascii table
+j	I	PAPAPQPE/PAPAPQPA
+k	K	PKPETPKT/PETPKT
+l	L	VPAPKT/TPAPKT/APAPKT
+m	M	ESENPAPA/PENPAPA
+# skip > - doesn't play well with FASTA format!
+n	N	PETPAPA
+# restart just above space on ascii table
+o	Q	PKPAPTPEAPAPA
+p	P	PAPAPA/PAPAPAK/PAPAPAQ
+q	Q	EKPAEEPA/EKPAEEPT

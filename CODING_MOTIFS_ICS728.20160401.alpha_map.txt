@@ -1,0 +1,60 @@
+# map all lower case to UNUSED single-LETTER codes
+# our data has 10 actual AA codes (ADEKLPQRSTV), which leaves the other 16 letters available.
+# merge some AA into groups using Vasiliky groups: E->D, R->K to get 2 more free letters
+# our data then as 8 virtual AA codes (ADKLPQSTV), which leaves the other 18 letters available; yea!
+#src	dest	aa_seq
+# map some AA's into Vasiliky groups
+E	D	#vasiliky group: DE
+R	K	#vasiliky group: RK
+# map motifs into available free letters
+a	B	PEKPAE
+b	U	PKPAPA/PKPAPK
+c	C	EKPAPAP/EKTPAPA/EKPAPATP
+d	W	PKPEQP/PAPEQP
+# include typo fix
+5	X	QPAPAP
+e	X	QPAPAP
+f	F	NPB
+g	G	PDGDEEET/PDGDEEEL
+h	H	EPTQPEKPA/VTPKT
+i	I	ETPAPEAPAEQ/PAPEAPAEQPK/ETPAPEAP/PTPEAPA
+j	J	PAPAPQPE/PAPAPQPA
+k	Y	PKPETPKT/PETPKT
+l	Z	VPAPKT/TPAPKT/APAPKT
+m	M	ESENPAPA/PENPAPA
+n	N	PETPAPA
+o	O	PKPAPTPEAPAPA
+p	E	PAPAPA/PAPAPAK/PAPAPAQ
+q	R	EKPAEEPA/EKPAEEPT
+#
+# ---------------------
+# alphabet usage - need two more letters!
+# Vasiliky groups of positive subsitutions: rk, de, qh, vilm, fy (other residues kept alone).
+#	original  group	
+# A	AA	
+# B	a
+# C	c
+# D	AA	D
+# E	AA	D/p	
+# F	f
+# G	g
+# H	h	
+# I	i
+# J	j
+# K	AA	K
+# L	AA
+# M	m
+# N	n
+# O	o
+# P	AA
+# Q	AA
+# R	AA	K/z
+# S	AA
+# T	AA
+# U	b
+# V	AA
+# W	d
+# X 	e
+# Y	y
+# Z	l
+
