@@ -1,0 +1,8 @@
+#!/usr/bin/awk
+
+BEGIN { OFS="\t"; IFS="\t" }
+
+($1 != "" && $2 != "") {
+	print ">"$1;
+	print $2;
+}
